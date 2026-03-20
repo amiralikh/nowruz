@@ -241,7 +241,7 @@ You have already been running this. It is fine. But consider:
 ## FAQ
 
 **Q: When exactly does Nowruz start?**
-A: At the precise moment of the vernal equinox. Families will begin the sofreh countdown with a TV broadcast, collectively staring at numbers until the year ticks over, then immediately saying `عید مبارک` while crying a little. It is perfect.
+A: At the precise moment of the vernal equinox. Families will begin the sofreh countdown with a TV broadcast, collectively staring at numbers until the year ticks over, then immediately saying `نوروز مبارک` while crying a little. It is perfect.
 
 **Q: What if I don't have all seven haft-seen items?**
 A: Historically, civilizations have survived. But your aunt will notice, mention it to your mother, and it will be discussed for eleven months.
