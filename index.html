@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هفت‌سین دولوپری — نوروز 1405</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Vazirmatn:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #f0d080;
+    --gold-pale: #fdf3d0;
+    --cream: #faf6ef;
+    --linen: #f2e8d5;
+    --warm-dark: #2c1a0e;
+    --bark: #6b3f1a;
+    --rust: #b84a1a;
+    --sage: #4a7c59;
+    --sage-light: #7db896;
+    --sky: #3a6a9a;
+    --sky-light: #a8d0f0;
+    --berry: #8b2252;
+    --deep: #1a0f05;
+    --shadow: rgba(44,26,14,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--deep);
+    font-family: 'Vazirmatn', 'Georgia', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Stars background ── */
+  .stars {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(201,168,76,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 90%, rgba(138,34,82,0.07) 0%, transparent 50%),
+      #120a04;
+  }
+  .stars::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(240,208,128,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 60%, rgba(240,208,128,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 50% 10%, rgba(240,208,128,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 40%, rgba(240,208,128,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 70%, rgba(240,208,128,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 15% 80%, rgba(240,208,128,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 85%, rgba(240,208,128,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 15%, rgba(240,208,128,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 90%, rgba(240,208,128,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 75% 5%, rgba(240,208,128,0.5) 0%, transparent 100%);
+  }
+
+  /* ── Main wrapper ── */
+  .sofreh-wrapper {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    animation: fadeDown 1s ease both;
+  }
+
+  .header-eyebrow {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.75rem;
+    direction: ltr;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    color: var(--gold-light);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 60px rgba(201,168,76,0.4);
+    direction: rtl;
+  }
+
+  .header h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .header-sub {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: rgba(240,208,128,0.5);
+    direction: ltr;
+    margin-top: 0.5rem;
+  }
+
+  .header-divider {
+    width: 120px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 1.5rem auto;
+  }
+
+  /* ── Sofreh cloth ── */
+  .sofreh-cloth {
+    position: relative;
+    background: linear-gradient(135deg, #3d2010 0%, #2a1508 40%, #3a1e0c 100%);
+    border-radius: 2rem;
+    padding: 2.5rem 2rem;
+    box-shadow:
+      0 0 0 1px rgba(201,168,76,0.2),
+      0 0 60px rgba(201,168,76,0.08),
+      0 40px 80px rgba(0,0,0,0.6);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  /* Cloth pattern overlay */
+  .sofreh-cloth::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent, transparent 8px,
+      rgba(201,168,76,0.03) 8px, rgba(201,168,76,0.03) 9px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent, transparent 8px,
+      rgba(201,168,76,0.03) 8px, rgba(201,168,76,0.03) 9px
+    );
+    pointer-events: none;
+  }
+
+  .sofreh-cloth::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(201,168,76,0.15);
+    pointer-events: none;
+  }
+
+  /* ── Grid ── */
+  .haft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    position: relative; z-index: 1;
+  }
+
+  /* ── Card ── */
+  .sin-card {
+    position: relative;
+    background: rgba(250,246,239,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.5rem 1.5rem;
+    cursor: default;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: cardIn 0.7s ease both;
+    overflow: hidden;
+  }
+
+  .sin-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--card-accent, var(--gold)), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sin-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201,168,76,0.35);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(201,168,76,0.08);
+  }
+
+  .sin-card:hover::before { opacity: 1; }
+
+  .sin-card:nth-child(1) { animation-delay: 0.1s; --card-accent: #4a7c59; }
+  .sin-card:nth-child(2) { animation-delay: 0.15s; --card-accent: #2a1405; }
+  .sin-card:nth-child(3) { animation-delay: 0.2s; --card-accent: #e74c3c; }
+  .sin-card:nth-child(4) { animation-delay: 0.25s; --card-accent: #00ff88; }
+  .sin-card:nth-child(5) { animation-delay: 0.3s; --card-accent: #3a6a9a; }
+  .sin-card:nth-child(6) { animation-delay: 0.35s; --card-accent: #569cd6; }
+  .sin-card:nth-child(7) { animation-delay: 0.4s; --card-accent: #e74c3c; }
+
+  /* ── Card illustration ── */
+  .card-illustration {
+    height: 110px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+
+  .card-illustration svg {
+    width: 100%; height: 100%;
+    overflow: visible;
+  }
+
+  /* ── Card content ── */
+  .card-sin-label {
+    display: flex; align-items: baseline; gap: 0.6rem;
+    margin-bottom: 0.4rem;
+    flex-direction: row-reverse;
+  }
+
+  .sin-persian {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    font-weight: 700;
+  }
+
+  .sin-latin {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: rgba(201,168,76,0.5);
+    letter-spacing: 0.05em;
+    direction: ltr;
+  }
+
+  .card-meaning {
+    font-family: 'Vazirmatn', serif;
+    font-size: 0.82rem;
+    color: rgba(240,220,180,0.55);
+    margin-bottom: 0.9rem;
+    direction: rtl;
+  }
+
+  .card-tech {
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    position: relative;
+  }
+
+  .card-tech-name {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--gold);
+    direction: ltr;
+    margin-bottom: 0.3rem;
+  }
+
+  .card-tech-desc {
+    font-family: 'Vazirmatn', serif;
+    font-size: 0.75rem;
+    color: rgba(240,220,180,0.65);
+    direction: rtl;
+    line-height: 1.5;
+  }
+
+  /* ── Extras row ── */
+  .extras-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    position: relative; z-index: 1;
+    margin-top: 1.25rem;
+  }
+
+  .extra-item {
+    background: rgba(250,246,239,0.03);
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    display: flex; align-items: center; gap: 0.85rem;
+    transition: border-color 0.2s, background 0.2s;
+    animation: cardIn 0.7s ease both;
+    animation-delay: 0.5s;
+  }
+
+  .extra-item:hover {
+    border-color: rgba(201,168,76,0.25);
+    background: rgba(250,246,239,0.06);
+  }
+
+  .extra-icon {
+    font-size: 1.6rem; flex-shrink: 0;
+    filter: sepia(0.3);
+  }
+
+  .extra-text-en {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    direction: ltr;
+  }
+
+  .extra-text-fa {
+    font-family: 'Vazirmatn', serif;
+    font-size: 0.78rem;
+    color: rgba(240,220,180,0.6);
+    direction: rtl;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    animation: fadeUp 1s 0.8s ease both;
+  }
+
+  .footer-blessing {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    color: var(--gold-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-sub {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: rgba(201,168,76,0.4);
+    direction: ltr;
+  }
+
+  /* ── Animations ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  @keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .sofreh-cloth { padding: 1.5rem 1rem; border-radius: 1.25rem; }
+    .haft-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .card-illustration { height: 90px; }
+    .extras-row { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 900px) {
+    .haft-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    /* Center the 7th card */
+    .sin-card:nth-child(7) {
+      grid-column: 2;
+    }
+  }
+
+  /* Tooltip */
+  .tooltip-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2rem;
+    padding: 0.2rem 0.6rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.6rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    direction: ltr;
+  }
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<div class="sofreh-wrapper">
+
+  <!-- Header -->
+  <header class="header">
+    <p class="header-eyebrow">// Nowruz 1405 · A Developer's Sofreh-ye Haft Seen</p>
+    <h1>هفت‌<em>سین</em> دولوپری</h1>
+    <p class="header-sub">git checkout -b nowruz/1405 && npm run celebrate</p>
+    <div class="header-divider"></div>
+  </header>
+
+  <!-- Sofreh cloth container -->
+  <div class="sofreh-cloth">
+
+    <!-- Seven S items -->
+    <div class="haft-grid">
+
+      <!-- 1. سبزه — Git Branches -->
+      <div class="sin-card">
+        <span class="tooltip-badge">growth</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bowl -->
+            <ellipse cx="100" cy="95" rx="55" ry="15" fill="#8b6914" opacity="0.5"/>
+            <ellipse cx="100" cy="93" rx="52" ry="12" fill="#a07830" opacity="0.4"/>
+            <!-- Main trunk -->
+            <line x1="100" y1="92" x2="100" y2="25" stroke="#4a7c59" stroke-width="3" stroke-linecap="round"/>
+            <!-- Branches -->
+            <line x1="100" y1="60" x2="68" y2="38" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+            <line x1="100" y1="50" x2="132" y2="28" stroke="#6ab885" stroke-width="2" stroke-linecap="round"/>
+            <line x1="68" y1="38" x2="52" y2="22" stroke="#4a7c59" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="132" y1="28" x2="148" y2="14" stroke="#6ab885" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Commit dots -->
+            <circle cx="100" cy="25" r="6" fill="#4a7c59" stroke="#7db896" stroke-width="1.5"/>
+            <circle cx="52" cy="22" r="5" fill="#2d6a44" stroke="#5a9c6e" stroke-width="1.5"/>
+            <circle cx="148" cy="14" r="5" fill="#5aac6e" stroke="#8dcca0" stroke-width="1.5"/>
+            <circle cx="68" cy="38" r="4" fill="#4a7c59"/>
+            <circle cx="132" cy="28" r="4" fill="#6ab885"/>
+            <!-- Labels -->
+            <text x="100" y="23" text-anchor="middle" font-family="'Fira Code',monospace" font-size="6" fill="white">main</text>
+            <text x="52" y="20" text-anchor="middle" font-family="'Fira Code',monospace" font-size="5" fill="white">dev</text>
+            <text x="148" y="12" text-anchor="middle" font-family="'Fira Code',monospace" font-size="5" fill="white">feat</text>
+            <!-- Grass/wheat base -->
+            <g style="animation: sway 2s ease-in-out infinite">
+              <path d="M82 92 Q80 78 78 68" stroke="#6ab885" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M90 92 Q88 74 85 62" stroke="#4a7c59" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M108 92 Q112 75 115 63" stroke="#6ab885" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M116 92 Q120 78 122 68" stroke="#4a7c59" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سبزه</span>
+          <span class="sin-latin">sabzeh · rebirth</span>
+        </div>
+        <p class="card-meaning">نماد رشد و تازگی</p>
+        <div class="card-tech">
+          <div class="card-tech-name">git branch --all</div>
+          <div class="card-tech-desc">هر شاخه یک ایده، هر commit یک قدم رو به جلو — رشد کد در نوروز</div>
+        </div>
+      </div>
+
+      <!-- 2. سمنو — Dark Mode -->
+      <div class="sin-card">
+        <span class="tooltip-badge">sweetness</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bowl dark -->
+            <ellipse cx="100" cy="95" rx="50" ry="13" fill="#5a3010" opacity="0.6"/>
+            <ellipse cx="100" cy="85" rx="45" ry="22" fill="#2a1405" stroke="#7a4a1a" stroke-width="1"/>
+            <ellipse cx="100" cy="80" rx="40" ry="17" fill="#1a0c04"/>
+            <!-- VS Code dark theme simulation -->
+            <rect x="65" y="22" width="70" height="55" rx="4" fill="#1e1e2e" stroke="#3a3a5a" stroke-width="0.8"/>
+            <!-- Window bar -->
+            <rect x="65" y="22" width="70" height="11" rx="4" fill="#2d2d4a"/>
+            <circle cx="72" cy="27.5" r="2.5" fill="#e74c3c"/>
+            <circle cx="79" cy="27.5" r="2.5" fill="#f39c12"/>
+            <circle cx="86" cy="27.5" r="2.5" fill="#27ae60"/>
+            <!-- Code lines -->
+            <text x="70" y="43" font-family="'Fira Code',monospace" font-size="5.5" fill="#569cd6">const</text>
+            <text x="88" y="43" font-family="'Fira Code',monospace" font-size="5.5" fill="#9cdcfe"> theme</text>
+            <text x="70" y="52" font-family="'Fira Code',monospace" font-size="5.5" fill="#dcdcaa">  = </text>
+            <text x="81" y="52" font-family="'Fira Code',monospace" font-size="5.5" fill="#ce9178">'dark'</text>
+            <text x="70" y="61" font-family="'Fira Code',monospace" font-size="5.5" fill="#6a9955">// 🌙 samanu</text>
+            <!-- Moon icon -->
+            <text x="118" y="30" font-family="sans-serif" font-size="8" fill="#c8a84c">🌙</text>
+            <!-- Cursor blink -->
+            <rect x="70" y="65" width="4" height="6" fill="#569cd6" style="animation: blink-cursor 1s step-end infinite"/>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سمنو</span>
+          <span class="sin-latin">samanu · sweetness</span>
+        </div>
+        <p class="card-meaning">نماد شیرینی و برکت</p>
+        <div class="card-tech">
+          <div class="card-tech-name">theme: 'dark' → system</div>
+          <div class="card-tech-desc">شیرینی کدنویسی شبانه — dark mode برای چشم‌های خسته دولوپر</div>
+        </div>
+      </div>
+
+      <!-- 3. سیب — App Icons / Health -->
+      <div class="sin-card">
+        <span class="tooltip-badge">health</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="95" rx="50" ry="13" fill="#8b6914" opacity="0.4"/>
+            <!-- Three app icon apples -->
+            <!-- Left -->
+            <rect x="32" y="28" width="42" height="42" rx="10" fill="#e74c3c"/>
+            <text x="53" y="54" text-anchor="middle" font-family="'Fira Code',monospace" font-size="16" fill="rgba(255,255,255,0.95)">⌘</text>
+            <rect x="50" y="22" width="6" height="8" rx="2" fill="#27ae60"/>
+            <!-- Center (bigger) -->
+            <rect x="79" y="20" width="42" height="42" rx="10" fill="#3498db"/>
+            <text x="100" y="46" text-anchor="middle" font-family="'Fira Code',monospace" font-size="14" fill="white">{}</text>
+            <rect x="97" y="14" width="6" height="8" rx="2" fill="#a0522d"/>
+            <!-- Right -->
+            <rect x="126" y="28" width="42" height="42" rx="10" fill="#27ae60"/>
+            <text x="147" y="54" text-anchor="middle" font-family="'Fira Code',monospace" font-size="14" fill="white">✓</text>
+            <rect x="144" y="22" width="6" height="8" rx="2" fill="#8b2252"/>
+            <!-- App store stars -->
+            <text x="100" y="80" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#f0d080">★ ★ ★ ★ ★</text>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سیب</span>
+          <span class="sin-latin">sib · health</span>
+        </div>
+        <p class="card-meaning">نماد سلامتی و زیبایی</p>
+        <div class="card-tech">
+          <div class="card-tech-name">npm run build → App Store</div>
+          <div class="card-tech-desc">هر اپلیکیشن یک سیب — سلامت کد، سلامت UX، سلامت user</div>
+        </div>
+      </div>
+
+      <!-- 4. سیر — Terminal / Power -->
+      <div class="sin-card">
+        <span class="tooltip-badge">power</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="95" rx="50" ry="13" fill="#8b6914" opacity="0.4"/>
+            <!-- Terminal window -->
+            <rect x="40" y="18" width="120" height="68" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+            <rect x="40" y="18" width="120" height="16" rx="6" fill="#161b22"/>
+            <circle cx="53" cy="26" r="3" fill="#e74c3c"/>
+            <circle cx="63" cy="26" r="3" fill="#f39c12"/>
+            <circle cx="73" cy="26" r="3" fill="#27ae60"/>
+            <text x="100" y="29" text-anchor="middle" font-family="'Fira Code',monospace" font-size="6" fill="#8b949e">zsh — 80×24</text>
+            <!-- Terminal lines -->
+            <text x="48" y="46" font-family="'Fira Code',monospace" font-size="6.5" fill="#58a6ff">❯</text>
+            <text x="57" y="46" font-family="'Fira Code',monospace" font-size="6.5" fill="#c9d1d9"> php artisan</text>
+            <text x="48" y="57" font-family="'Fira Code',monospace" font-size="6.5" fill="#58a6ff">❯</text>
+            <text x="57" y="57" font-family="'Fira Code',monospace" font-size="6.5" fill="#3fb950">   migrate --seed</text>
+            <text x="48" y="68" font-family="'Fira Code',monospace" font-size="6.5" fill="#58a6ff">❯</text>
+            <text x="57" y="68" font-family="'Fira Code',monospace" font-size="6.5" fill="#c9d1d9"> git push origin</text>
+            <!-- Cursor -->
+            <rect x="48" y="76" width="5" height="7" fill="#58a6ff" style="animation: blink-cursor 1s step-end infinite"/>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سیر</span>
+          <span class="sin-latin">sir · medicine</span>
+        </div>
+        <p class="card-meaning">نماد دارو و قدرت</p>
+        <div class="card-tech">
+          <div class="card-tech-name">$ php artisan migrate</div>
+          <div class="card-tech-desc">ترمینال — داروی هر bug، قدرت هر دولوپر، خانه واقعی برنامه‌نویس</div>
+        </div>
+      </div>
+
+      <!-- 5. سنجد — Database Seeds -->
+      <div class="sin-card">
+        <span class="tooltip-badge">love</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="95" rx="50" ry="13" fill="#8b6914" opacity="0.4"/>
+            <!-- Database cylinders stacked like senjed olives -->
+            <!-- Back cylinder -->
+            <ellipse cx="100" cy="45" rx="38" ry="10" fill="#2a5070" stroke="#3a70a0" stroke-width="1"/>
+            <rect x="62" y="45" width="76" height="22" fill="#1a3d5a"/>
+            <rect x="62" y="45" width="76" height="22" fill="url(#dbGrad)" opacity="0.5"/>
+            <ellipse cx="100" cy="67" rx="38" ry="10" fill="#1a3d5a" stroke="#2a5070" stroke-width="1"/>
+            <!-- Middle cylinder -->
+            <ellipse cx="100" cy="35" rx="32" ry="8" fill="#3a6a9a" stroke="#5a90c0" stroke-width="1"/>
+            <rect x="68" y="35" width="64" height="18" fill="#2a5080"/>
+            <ellipse cx="100" cy="53" rx="32" ry="8" fill="#2a5080" stroke="#3a6a9a" stroke-width="1"/>
+            <!-- Top cylinder -->
+            <ellipse cx="100" cy="27" rx="24" ry="6" fill="#5a90c0" stroke="#7ab0e0" stroke-width="1"/>
+            <rect x="76" y="27" width="48" height="14" fill="#3a70a8"/>
+            <ellipse cx="100" cy="41" rx="24" ry="6" fill="#3a70a8" stroke="#5a90c0" stroke-width="1"/>
+            <!-- Data lines on cylinders -->
+            <line x1="72" y1="50" x2="86" y2="50" stroke="#5a90c0" stroke-width="1" opacity="0.6"/>
+            <line x1="72" y1="55" x2="94" y2="55" stroke="#5a90c0" stroke-width="1" opacity="0.6"/>
+            <line x1="72" y1="60" x2="88" y2="60" stroke="#5a90c0" stroke-width="1" opacity="0.6"/>
+            <!-- Seed dots scattered like senjed -->
+            <ellipse cx="66" cy="88" rx="5" ry="3" fill="#8b6914" transform="rotate(-20,66,88)"/>
+            <ellipse cx="80" cy="90" rx="5" ry="3" fill="#a07830" transform="rotate(-5,80,90)"/>
+            <ellipse cx="120" cy="90" rx="5" ry="3" fill="#8b6914" transform="rotate(10,120,90)"/>
+            <ellipse cx="134" cy="88" rx="5" ry="3" fill="#a07830" transform="rotate(25,134,88)"/>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سنجد</span>
+          <span class="sin-latin">senjed · love</span>
+        </div>
+        <p class="card-meaning">نماد عشق و دلبستگی</p>
+        <div class="card-tech">
+          <div class="card-tech-name">db:seed --class=LoveSeeder</div>
+          <div class="card-tech-desc">بذر داده‌های اولیه — عشق دولوپر به ساختار، نظم و relational schema</div>
+        </div>
+      </div>
+
+      <!-- 6. سرکه — Code Review -->
+      <div class="sin-card">
+        <span class="tooltip-badge">patience</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="95" rx="50" ry="13" fill="#8b6914" opacity="0.4"/>
+            <!-- PR diff card -->
+            <rect x="38" y="16" width="124" height="70" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+            <!-- PR header -->
+            <rect x="38" y="16" width="124" height="14" rx="6" fill="#161b22"/>
+            <text x="48" y="27" font-family="'Fira Code',monospace" font-size="6" fill="#58a6ff">Pull Request #42</text>
+            <rect x="144" y="19" width="14" height="8" rx="3" fill="#238636" opacity="0.9"/>
+            <text x="151" y="26" text-anchor="middle" font-family="'Fira Code',monospace" font-size="5" fill="white">Open</text>
+            <!-- Diff lines -->
+            <rect x="42" y="36" width="116" height="7" rx="1" fill="#1f6feb" opacity="0.15"/>
+            <text x="46" y="43" font-family="'Fira Code',monospace" font-size="6" fill="#8b949e">@@ -12,7 +12,8 @@</text>
+
+            <rect x="42" y="46" width="116" height="7" rx="1" fill="#f851491a"/>
+            <text x="46" y="52" font-family="'Fira Code',monospace" font-size="6" fill="#f85149">- const old = 'serkeh'</text>
+
+            <rect x="42" y="55" width="116" height="7" rx="1" fill="#3fb9501a"/>
+            <text x="46" y="61" font-family="'Fira Code',monospace" font-size="6" fill="#3fb950">+ const new = 'wisdom'</text>
+
+            <rect x="42" y="64" width="116" height="7" rx="1" fill="#3fb9501a"/>
+            <text x="46" y="70" font-family="'Fira Code',monospace" font-size="6" fill="#3fb950">+ // patience breeds craft</text>
+            <!-- Comment bubble -->
+            <rect x="48" y="76" width="60" height="7" rx="2" fill="#1f2937"/>
+            <text x="51" y="82" font-family="'Fira Code',monospace" font-size="5" fill="#9ca3af">LGTM 👍 approved</text>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سرکه</span>
+          <span class="sin-latin">serkeh · patience</span>
+        </div>
+        <p class="card-meaning">نماد صبر و بردباری</p>
+        <div class="card-tech">
+          <div class="card-tech-name">gh pr review --approve</div>
+          <div class="card-tech-desc">code review — صبر در برابر هر تغییر، حکمت در هر comment</div>
+        </div>
+      </div>
+
+      <!-- 7. سماق — Error Logs -->
+      <div class="sin-card">
+        <span class="tooltip-badge">sunrise</span>
+        <div class="card-illustration">
+          <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="95" rx="50" ry="13" fill="#8b6914" opacity="0.4"/>
+            <!-- Error log terminal -->
+            <rect x="38" y="14" width="124" height="72" rx="6" fill="#1a0505" stroke="#5a1010" stroke-width="1"/>
+            <rect x="38" y="14" width="124" height="13" rx="6" fill="#2d0808"/>
+            <text x="100" y="24" text-anchor="middle" font-family="'Fira Code',monospace" font-size="6" fill="#e74c3c">● Laravel Log</text>
+
+            <text x="44" y="39" font-family="'Fira Code',monospace" font-size="5.5" fill="#e74c3c">[ERROR]</text>
+            <text x="72" y="39" font-family="'Fira Code',monospace" font-size="5.5" fill="#c9d1d9"> 500 Internal</text>
+
+            <text x="44" y="50" font-family="'Fira Code',monospace" font-size="5.5" fill="#f39c12">[WARN] </text>
+            <text x="72" y="50" font-family="'Fira Code',monospace" font-size="5.5" fill="#c9d1d9"> memory 89%</text>
+
+            <text x="44" y="61" font-family="'Fira Code',monospace" font-size="5.5" fill="#27ae60">[INFO] </text>
+            <text x="72" y="61" font-family="'Fira Code',monospace" font-size="5.5" fill="#c9d1d9"> fixed in 3ms ✓</text>
+
+            <!-- Sumac powder spill at bottom suggesting red spice -->
+            <ellipse cx="70" cy="80" rx="12" ry="4" fill="#c0392b" opacity="0.6"/>
+            <ellipse cx="100" cy="82" rx="16" ry="4" fill="#e74c3c" opacity="0.5"/>
+            <ellipse cx="130" cy="80" rx="10" ry="4" fill="#c0392b" opacity="0.6"/>
+            <text x="100" y="82" text-anchor="middle" font-family="'Fira Code',monospace" font-size="5" fill="rgba(255,200,200,0.7)">sumac dust</text>
+          </svg>
+        </div>
+        <div class="card-sin-label">
+          <span class="sin-persian">سماق</span>
+          <span class="sin-latin">somāq · sunrise</span>
+        </div>
+        <p class="card-meaning">نماد رنگ سرخ سپیده‌دم</p>
+        <div class="card-tech">
+          <div class="card-tech-name">tail -f storage/logs/laravel.log</div>
+          <div class="card-tech-desc">سرخی log — هر error یک درس، هر fix یک طلوع جدید</div>
+        </div>
+      </div>
+
+    </div><!-- /haft-grid -->
+
+    <!-- Extras row: Quran→Docs, Mirror, Candles, Goldfish -->
+    <div class="extras-row">
+      <div class="extra-item">
+        <span class="extra-icon">📖</span>
+        <div>
+          <div class="extra-text-en">README.md · Documentation</div>
+          <div class="extra-text-fa">کتاب آسمانی هر repo</div>
+        </div>
+      </div>
+      <div class="extra-item">
+        <span class="extra-icon">🕯️</span>
+        <div>
+          <div class="extra-text-en">CI/CD Pipeline</div>
+          <div class="extra-text-fa">شمع‌های build سبز</div>
+        </div>
+      </div>
+      <div class="extra-item">
+        <span class="extra-icon">🪞</span>
+        <div>
+          <div class="extra-text-en">git diff HEAD~1</div>
+          <div class="extra-text-fa">آینه‌ای برای کد گذشته</div>
+        </div>
+      </div>
+      <div class="extra-item">
+        <span class="extra-icon">🐟</span>
+        <div>
+          <div class="extra-text-en">Production Environment</div>
+          <div class="extra-text-fa">ماهی قرمز prod — زنده و سالم</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sofreh-cloth -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-blessing">🌸 نوروز ۱۴۰۴ مبارک 🌸</p>
+    <p class="footer-sub">may your builds be green, your PRs approved, and your logs clean · عید شما مبارک</p>
+  </footer>
+
+</div><!-- /wrapper -->
+
+</body>
+</html>
