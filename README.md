@@ -293,7 +293,7 @@ This project has been sponsored, in various centuries, by:
 ## Changelog
 
 ```
-v1405.0.0  (March 2026)
+v1404.0.0  (March 2026)
   - Another year. Same beauty. New hope.
   - feat: you are still here (underrated)
   - fix: last year's mistakes not carried forward (manual step required)
